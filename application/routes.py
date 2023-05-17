@@ -16,7 +16,7 @@ class checarDados(Resource):
             for key, value in areaDado["geoData"].items():
                 dadosRetornar.append({key: str(value)})
 
-            with open('C:\\Users\\Rafael\\Desktop\\flaskAPIPROJETOS\\telegramBot\\' + areaDado["pathJPG"],
+            with open(os.environ.get('PATH_BOT') + areaDado["pathJPG"],
                       'rb') as file:
 
                 jpg_bytes = file.read()
