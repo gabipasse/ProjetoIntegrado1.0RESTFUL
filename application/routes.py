@@ -25,8 +25,6 @@ class checarDados(Resource):
 
             dadosRetornar.append({"jpgImg": base64_encoded_bytes})
 
-            dadosRetornar.append({"_id": areaDado["_id"]})
-
         return json.loads(json_util.dumps(dadosRetornar))
 
 
@@ -38,6 +36,7 @@ class checarUsuarios(Resource):
             dadosRetornar.append(usuarioDado)
 
         return json.loads(json_util.dumps(dadosRetornar))
+    
 
 api.add_resource(checarDados, "/checarDados")
 
